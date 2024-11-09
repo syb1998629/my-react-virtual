@@ -1,0 +1,229 @@
+/* Market.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #f5f7fa;
+  --text-color: #34495e;
+  --border-color: #e0e6ed;
+  --positive-color: #2ecc71;
+  --negative-color: #e74c3c;
+  --card-background: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.market-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.market-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.balance {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.market-content {
+  display: flex;
+  gap: 20px;
+}
+
+.currency-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.currency-item {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  transition: var(--transition);
+}
+
+.currency-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.currency-item.selected {
+  border-color: var(--primary-color);
+}
+
+.currency-symbol {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.currency-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.currency-change.positive {
+  color: var(--positive-color);
+}
+
+.currency-change.negative {
+  color: var(--negative-color);
+}
+
+.price-chart {
+  flex: 2;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+   background-color: #fafafa;
+}
+
+.price-chart h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.chart-controls button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chart-controls button:hover,
+.chart-controls button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.trading-panel {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.trading-panel input,
+.trading-panel button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.trading-panel button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.trading-panel button:hover {
+  background-color: #1565c0;
+}
+
+.trade-history,
+.price-alerts,
+.news-feed,
+.leaderboard {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.trade-item,
+.news-item,
+.leaderboard-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+}
+
+.trade-item:last-child,
+.news-item:last-child,
+.leaderboard-item:last-child {
+  border-bottom: none;
+}
+
+.tutorial {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .market-content {
+    flex-direction: column;
+  }
+
+  .currency-list {
+    grid-template-columns: 1fr;
+  }
+}
+.wallet-overview h3 {
+  color: white;
+}
+.wallet-overview {
+  color: white;
+}

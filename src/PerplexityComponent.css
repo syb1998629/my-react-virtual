@@ -1,0 +1,145 @@
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.quiz-title {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+.question-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.question-number {
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.question {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.question-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.option:hover {
+  background-color: #d0d7dc;
+}
+
+.option label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.feedback.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.feedback.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.error-records {
+  margin-top: 30px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.error-records h3 {
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.error-records ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.error-records li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.error-records strong {
+  color: #495057;
+}
